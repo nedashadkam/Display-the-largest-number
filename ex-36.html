@@ -1,0 +1,52 @@
+<!-- . یک دستور شرطی جاوا اسکریپت بنویسید تا بزرگترین عدد از پنج عدد را پیدا کنید. یک جعبه هشدار برای نمایش نتایج نمایش داده شود. -->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="ex-36.css">
+
+</head>
+
+<body>
+
+    <div>
+
+        <p>
+
+            <label for="numbers">Enter five numbers separated by commas :</label>
+
+            <input type="text" id="numbers">
+
+        </p>
+
+        <button onclick="output()">Display the largest number</button>
+
+    </div>
+
+    <script>
+
+        function output() {
+
+            let numbers = document.getElementById("numbers").value.split(",");
+
+            let max = numbers[0]
+            numbers.forEach(x = (value) => {
+
+                if (max < +value) {
+                    max = value;
+                }
+
+            });
+
+            window.alert("The largest number is : " + max) ;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
